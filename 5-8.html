@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        조건연사자 (조건)?참일경우수행문장: 겨짓일경우수행문장;
+    -->
+</head>
+<body>
+    <script>
+        /*
+        // 절대값 계산 (예1) 입력 : 5, 출력 : 5 (예) 입력 : -5, 출력 : 5
+        var i=parseInt(prompt("수치 하나 입력하세요.",0));
+
+        re(i>=0)?"POSITIVE":"NEGATIVE";
+        alert("i값 " + i + "은" + re + "입니다.");
+        */
+
+        /*
+        // 문자 하나 입력해 대문자인지, 그외 문자인지 체크하는 프로그램
+        var str=prompt("문자 하나 입력하세요.");
+
+        re=(str >= "A" && str <="Z")?"대문자입력":"그외 문자";
+        document.write(re);
+        */
+
+        var str=prompt("문자 하나 입력하세요.");
+
+        re=(str=="Y" || str=="y")?"yes":"error";
+        document.write(re);
+    </script>
+</body>
+</html>

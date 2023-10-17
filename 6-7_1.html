@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1~5까지 짜수, 홀수 합
+
+        var i, sum;
+        var esum=0, osum=0;
+        num=5;
+        for(i=1; i<=num; i++) {
+            if((i%2)==0) {
+                esum=esum+i;
+            }
+            else {
+                osum=osum+i;
+            }
+        }
+        document.write("1부터 " + num + " 까지 짝수의 합 " + esum + "<p>");
+        document.write("1부터 " + num + " 까지 홀수의 합" + osum + "<p>");
+    </script>
+</body>
+</html>
