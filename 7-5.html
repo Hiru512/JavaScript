@@ -7,10 +7,13 @@
 </head>
 <body>
     <script>
-        if(confirm("Hello World!")) {
-            document.write("Yes")
-        } else {
-            document.write("No");
+        var i, j, sum;
+        for(i = 10; i <= 100; i=i+10) {
+            sum = 0;
+            for(j = 1; j <= i; j++) {
+                sum = sum + j;
+            }
+            document.write("1 ... " + i + " = " + sum + "<br>");
         }
     </script>
 </body>
