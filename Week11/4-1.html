@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //전역변수, 지역변수
+        var count = 0;      //전역변수 선언
+
+        function button_onclick() {
+            //만약 여기다가 쓰면 var count = 0; -> 지역변수 이다.
+            count++;
+            alert(count + "회 클릭하셨습니다.");
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="버튼" onclick="button_onclick()"
+    </form>
+</body>
+</html>
