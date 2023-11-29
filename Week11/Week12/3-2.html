@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addRows() {
+            var mydoc = document;
+            var p = mydoc.getElementById("myTable");
+
+            var txtElement = mydoc.createTextNode("국제관례상 어쩔수 없다!");
+            var txtElement2 = mydoc.createTextNode("일단 고시 하고 보자!");
+
+            var row1 = p.insertRow(-1);
+
+            var cell1 =row1.insertCell(0);
+            var cell2 = row2.insertCell(1);
+
+            cell1.appendChild(txtElement);
+            cell2.appendChild(txtElement2);
+        }
+    </script>
+</head>
+<body>
+    <h2 id="myText">테이블 한줄을 추가</h2>
+    <form>
+        <table border="1" id="myTable">
+            <tr>
+                <td>사과</td>
+                <td>수박</td>
+            </tr>
+        </table>
+        <p>
+            <input value="행추가" type="button" onclick="addRows();">
+        </p>
+    </form>
+</body>
+</html>
