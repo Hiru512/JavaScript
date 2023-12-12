@@ -3,35 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>setTimeout()으로 웹 페이지 자동 연결</title>
+    <title>Document</title>
+    <script>
+    /*
+    getElecmentByTagName() html 문서내의 지정된 태그 반환
+    length : 지정된 갯수 반환
+    */
+   function getElements() {
+    var x=document.getElementsByTagName("p");
+    alert(x.length);
+    alert(x[0].innerHTML) //추가
+    alert(x[1].innerHTML); //추가
+    alert(x[2].innerHTML); //추가
+
+    var y=document.getElementsByTagName("input"); //추가
+    alert(y.length); //추가
+    alert(y[0].value); //추가
+    alert(y[1].value); //추가
+   }
+</script>
 </head>
 <body>
-    <h3>이미지에 마우스 올리고 5초간 그대로 있을 때 사이트로 이동합니다.</h3>
-    <hr>
-        <img id="img" src="dog.png" onmouseover="startTimer(5000)" onmouseout="cancelTimer()">
-    <script>
-        /*
-        setTimeout() 지정한 시간이 지난후 지정된 작업수행 단위는 밀리초 1000=1초
-        clearTimeout() setTimeout() 지정된 타이머 중단
-        */
-
-        let timerID = null;
-        
-        function startTimer(time) { //타이머 시작
-            timerID = setTimeout("load('http://www.naver.com')", time);
-
-            document.getElementById("img").title = "타이머 작동 시작..."; //툴팁 메시지
-        }
-
-        function cancelTimer() {
-            if(timerID != null) {
-                clearTimeout(timerID); //타이머 중단
-            }
-        }
-
-        function load(url) {
-            window.location = url; //현재 윈도우에 url 사이트 로드
-        }
-    </script>
+    <p>red</p>
+    <p>red</p>
+    <p>red</p>
+    <input type="text" size="20" /><br />
+    <input type="text" size="20" /><br />
+    <input type="text" size="20" /><br /><br />
+    <input type="button" onclick="getElements()" value="How many input elemnets?" />
 </body>
 </html>
